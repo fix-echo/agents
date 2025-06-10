@@ -1,0 +1,7 @@
+coding_task:
+  description: >
+    编写Python代码来完成这个任务：{assignment}
+  expected_output: >
+    一个包含代码本身及其运行输出的文本文件。
+  agent: coder
+  output_file: output/code_and_output.txt
