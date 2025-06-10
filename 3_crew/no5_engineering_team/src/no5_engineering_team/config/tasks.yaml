@@ -1,0 +1,50 @@
+design_task:
+  description: >
+    根据这里描述的高级需求，为工程师准备详细的设计；
+    所有内容都应该在1个python模块中，但需要概述模块中的类和方法。
+    以下是需求：{requirements}
+    重要：仅以markdown格式输出设计，详细列出模块中的类和函数，描述其功能。
+  expected_output: >
+    为工程师准备的详细设计，确定模块中的类和函数。
+  agent: engineering_lead
+  output_file: output/{module_name}_design.md
+
+code_task:
+  description: >
+    编写一个python模块来实现工程主管描述的设计，以实现需求。
+    以下是需求：{requirements}
+  expected_output: >
+    实现设计并满足需求的python模块。
+    重要：仅输出原始Python代码，不要包含任何markdown格式、代码块分隔符或反引号。
+    输出应该是可以直接保存到文件并执行的有效的Python代码。
+  agent: backend_engineer
+  context:
+    - design_task
+  output_file: output/{module_name}
+
+frontend_task:
+  description: >
+    在app.py模块中编写一个gradio UI来演示{module_name}中的给定后端类。
+    假设只有1个用户，保持UI非常简单 - 只是一个原型或演示。
+    以下是需求：{requirements}
+  expected_output: >
+    在app.py模块中演示给定后端类的gradio UI。
+    该文件应该可以直接运行，位于后端模块的同一目录中，并且应该从{module_name}导入后端类。
+    重要：仅输出原始Python代码，不要包含任何markdown格式、代码块分隔符或反引号。
+    输出应该是可以直接保存到文件并执行的有效的Python代码。
+  agent: frontend_engineer
+  context:
+    - code_task
+  output_file: output/app.py
+
+test_task:
+  description: >
+    为给定的后端模块{module_name}编写单元测试，并在后端模块的同一目录下创建test_{module_name}。
+  expected_output: >
+    测试给定后端模块的test_{module_name}模块。
+    重要：仅输出原始Python代码，不要包含任何markdown格式、代码块分隔符或反引号。
+    输出应该是可以直接保存到文件并执行的有效的Python代码。
+  agent: test_engineer
+  context:
+    - code_task
+  output_file: output/test_{module_name}
