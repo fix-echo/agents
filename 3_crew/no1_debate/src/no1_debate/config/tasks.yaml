@@ -1,0 +1,27 @@
+propose_task:
+  description: >
+    你正在支持这个议题：{motion}。
+    请提出一个支持该议题的清晰论点。
+    要有很强的说服力。
+  expected_output: >
+    以简洁的方式提出你支持该议题的清晰论点。
+  agent: debater
+  output_file: output/propose_task.md
+
+oppose_task:
+  description: >
+    你正在反对这个议题：{motion}。
+    请提出一个反对该议题的清晰论点。
+    要有很强的说服力。
+  expected_output: >
+    以简洁的方式提出你反对该议题的清晰论点。
+  agent: debater
+  output_file: output/oppose_task.md
+
+decide_task:
+  description: >
+    请审阅辩手们提出的论点，并决定哪一方的论点更有说服力。
+  expected_output: >
+    请决定哪一方的论点更有说服力，并说明原因。
+  agent: judge
+  output_file: output/decide_task.md
