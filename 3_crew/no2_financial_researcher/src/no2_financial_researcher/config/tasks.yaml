@@ -1,0 +1,31 @@
+research_task:
+  description: >
+    对{company}公司进行深入研究。重点关注：
+    1. 公司当前状况和健康状况
+    2. 公司历史业绩表现
+    3. 主要挑战和机遇
+    4. 最新新闻和事件
+    5. 未来展望和潜在发展
+
+    请确保以结构化的格式组织你的发现，并包含清晰的章节。
+  expected_output: >
+    一份全面的研究报告，包含组织良好的章节，涵盖{company}的所有要求方面。
+    在适当的地方包含具体的事实、数据和示例。
+  agent: researcher
+
+analysis_task:
+  description: >
+    分析研究结果并为{company}创建一份综合报告。
+    你的报告应该：
+    1. 以执行摘要开始
+    2. 包含研究中的所有关键信息
+    3. 提供对趋势和模式的深入分析
+    4. 提供公司市场展望，注意这不应被用于交易决策
+    5. 采用专业的、易于阅读的格式，并包含清晰的标题
+  expected_output: >
+    一份关于{company}的完整专业报告，展示研究结果并附有分析和见解。
+    报告应结构良好，包含执行摘要、主要章节和清晰的结论。
+  agent: analyst
+  context:
+    - research_task
+  output_file: output/analysis_task.md
