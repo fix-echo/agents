@@ -1,2 +1,3 @@
-My name is Ed Donner. I'm an entrepreneur, software engineer and data scientist. I'm originally from London, England, but I moved to NYC in 2000.
-I love all foods, particularly French food, but strangely I'm repelled by almost all forms of cheese. I'm not allergic, I just hate the taste! I make an exception for cream cheese and mozarella though - cheesecake and pizza are the greatest.
+
+我叫李云富，我是一名前端开发工程师，目前主要涉猎 AI Agent 领域，主要技术栈为 React、Next.js以及 React Native，我是成都人
+我喜欢各种美食，尤其是川菜肥肠血旺顿顿都要吃，还有各种小炒肉，回锅肉，水煮肉片都很不错，如果你来到我的城市，我邀请你来吃
